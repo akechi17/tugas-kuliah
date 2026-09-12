@@ -25,7 +25,7 @@ const Hero = ({ setIsHovered }) => {
       <div className='hero_content'>
         <div className='row justify-content-center'>
           <div
-            className='col-lg-4 col-sm-8 col-12 hero_content_inner js-cursor-extend'
+            className='col-lg-6 col-sm-10 col-12 hero_content_inner js-cursor-extend'
             onMouseEnter={() => {
               setIsHovered(true);
             }}

@@ -5731,12 +5731,25 @@ canvas.three-app {
 }
 
 /* Kata bahasa Indonesia di hero lebih panjang dari teks original
-   (mis. "mengubah"); kecilkan font di layar sempit agar tidak
-   terpotong oleh viewport. Berlaku untuk kedua layer (gelap & merah). */
+   (mis. "mengubah" ±4,36em). Pastikan kolom hero selalu cukup lebar:
+   - char tidak boleh wrap ke baris baru
+   - font diperkecil pada breakpoint yang kolomnya menyempit
+   Berlaku untuk kedua layer (gelap & merah) sekaligus. */
+.hero h1 .line {
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+  .hero h1,
+  .hero .h1 {
+    font-size: 7rem;
+  }
+}
+
 @media (max-width: 479px) {
   .hero h1,
   .hero .h1 {
-    font-size: 4.25rem;
+    font-size: 4rem;
   }
 }
 

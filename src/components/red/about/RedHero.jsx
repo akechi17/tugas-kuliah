@@ -5,7 +5,7 @@ const RedHero = () => {
     <div className="hero hero__red">
       <div className="hero_content">
         <div className="row justify-content-center">
-          <div className="col-lg-4 col-sm-8 col-12 hero_content_inner">
+          <div className="col-lg-6 col-sm-10 col-12 hero_content_inner">
             <span className="text-center h6 hero_content_inner_subtitle text-dark">
               Teknologi &amp; Kehidupan
             </span>
