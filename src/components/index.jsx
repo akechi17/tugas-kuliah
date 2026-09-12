@@ -1,0 +1,16 @@
+export { default as Loading } from "./Loading";
+export { default as SmoothScroll } from "./SmoothScroll";
+export { default as Header } from "./Header";
+export { default as ClipPath } from "./ClipPath";
+export { default as Footer } from "./Footer";
+export { default as About } from "./about/About";
+export { default as Work } from "./work/Work";
+export { default as Contact } from "./Contact";
+export { default as RedAbout } from "./red/about/RedAbout";
+export { default as RedHero } from "./red/about/RedHero";
+export { default as RedWork } from "./red/work/RedWork";
+export { default as RedClient } from "./red/work/RedClient";
+export { default as RedVideo } from "./red/work/RedVideo";
+export { default as RedTestimonials } from "./red/work/RedTestimonials";
+export { default as RedContact } from "./red/RedContact";
+export { default as SlideNav } from "./SlideNav";
