@@ -7784,6 +7784,21 @@ body:not(.is-enter) {
   position: relative;
 }
 
+/* tumpuk dua varian teks (description vs joke) di sel yang sama supaya
+   tinggi layer deep & masking selalu identik → tidak ada teks yang
+   "melompat ke atas" saat hover */
+.heading-stack {
+  display: grid;
+}
+
+.heading-stack > .stack-item {
+  grid-area: 1 / 1;
+}
+
+.heading-stack > .stack-ghost {
+  visibility: hidden;
+}
+
 .heading-mask:last-child {
   border-bottom: 1px solid hsla(37, 18%, 66%, 0.15);
 }

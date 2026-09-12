@@ -62,7 +62,15 @@ function Title({ data, setSelectedProject, selectedProject, setIsHidden }) {
                 setIsHidden(false);
               }}
             >
-              <p className='h3 mb-1'>{description}</p>
+              {/* stack description + placeholder joke pada sell yang sama
+                  supaya tinggi baris identik dgn layer masking → posisi Y
+                  teks di bawahnya tidak melompat saat hover */}
+              <div className='heading-stack mb-1'>
+                <p className='h3 mb-0 stack-item'>{description}</p>
+                <h4 className='h3 mb-0 stack-item stack-ghost' aria-hidden='true'>
+                  {joke}
+                </h4>
+              </div>
               <p className='mb-0 desc font-400'>{client}</p>
             </div>
           </div>
@@ -80,7 +88,12 @@ function Title({ data, setSelectedProject, selectedProject, setIsHidden }) {
           </div>
           <div className='col-lg-6 col-sm-8 col-9'>
             <div className='simple-masking_el'>
-              <h4 className='h3 mb-1 text-dark'>{joke}</h4>
+              <div className='heading-stack mb-1'>
+                <h4 className='h3 mb-0 stack-item text-dark'>{joke}</h4>
+                <p className='h3 mb-0 stack-item stack-ghost' aria-hidden='true'>
+                  {description}
+                </p>
+              </div>
               <p className='mb-0 desc font-400 text-dark'>{client}</p>
             </div>
           </div>
