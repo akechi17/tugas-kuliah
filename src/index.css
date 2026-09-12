@@ -5093,6 +5093,63 @@ canvas.three-app {
   z-index: 5;
 }
 
+/* Red layout aktif via toggle: mask lingkaran dibuat sangat besar
+   (di-drive dari inline style framer-motion) sehingga layer red
+   menutupi seluruh halaman di semua posisi scroll. */
+
+.red-toggle-btn {
+  align-items: center;
+  background: rgba(13, 13, 13, 0.85);
+  border: 1px solid rgba(183, 171, 152, 0.4);
+  border-radius: 999px;
+  bottom: 1.5rem;
+  color: #b7ab98;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-family-alt, inherit);
+  font-size: 0.625rem;
+  gap: 0.5rem;
+  letter-spacing: 0.2em;
+  padding: 0.5rem 0.875rem;
+  pointer-events: auto;
+  position: fixed;
+  right: 1.5rem;
+  text-transform: uppercase;
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+  z-index: 20;
+}
+
+.red-toggle-btn:hover {
+  border-color: #0cb9fb;
+  color: #fff;
+}
+
+.red-toggle-btn.is-active {
+  background: #0cb9fb;
+  border-color: #0cb9fb;
+  color: #0d0d0d;
+}
+
+.red-toggle-btn_dot {
+  background: #0cb9fb;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  transition: background 0.3s ease;
+  width: 8px;
+}
+
+.red-toggle-btn.is-active .red-toggle-btn_dot {
+  background: #0d0d0d;
+}
+
+@media (min-width: 768px) {
+  .red-toggle-btn {
+    bottom: 2.5rem;
+    right: 2.5rem;
+  }
+}
+
 .text-dark {
   color: #0d0d0d !important;
 }
