@@ -20,7 +20,7 @@ const RedHero = () => {
                   style={{
                     display: "block",
                     textAlign: "center",
-                    width: "fit-content",
+                    width: "max-content",
                     margin: "0 auto",
                   }}
                 >
